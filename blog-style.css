@@ -1,0 +1,154 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+ html{
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  margin-top: 50px;
+ }
+
+.nav-wrapper{
+  background-color: rgb(66, 66, 66);
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stetch;
+  color: white;
+  font-weight: 100px;
+  border-bottom: 2px solid rgba(204, 204, 204, 0.3);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.nav-links-wrapper{
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.nav-links{
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.name{
+  align-self: center;
+  margin-left: 50px;
+}
+
+.nav-link-wrapper{
+  display: flex;
+  transition: background-color 300ms;
+}
+
+.nav-link-wrapper:hover{
+  background-color: rgb(82, 82, 82);
+}
+
+.nav-link{
+  margin: 0px 25px;
+  align-self: center;
+}
+
+.nav-link:hover{
+  cursor: pointer;
+}
+.nav-link:active{
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+.link-divider{
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 2px;
+  border-radius: 40%;
+  align-self: center;
+  position: relative;
+  left: -1px;
+}
+
+.blog-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.blog-card.active {
+  opacity: 1;
+}
+
+.blog-card{
+  margin: 20px;
+  width: 70%;
+  height: 230px;
+  opacity: 1;
+  transition: opacity 1.5s;
+  box-shadow: 2px 2px 15px #333;
+  transform: translate(0, -65%);
+  z-index: 0;
+  background-color: white;
+  display: flex;
+}
+
+img{
+  width: 100%;
+  transition: all 1s;
+  opacity: 1;
+}
+
+.img-container{
+  position: relative;
+  text-align: center;
+}
+
+.title{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+.blog-image{
+  width: 50%;
+  height: 100%;
+}
+
+.blog-card-content{
+  padding: 30px 15px;
+  order: 0;
+}
+
+.blog-card-title{
+  font-size: 20px;
+}
+
+.blog-card-date{
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.blog-card-blurb{
+  margin-top: 10px;
+}
+
+.blog-card:nth-child(even) > .blog-image{
+  order: 1;
+
+}
